@@ -38,13 +38,16 @@
               <% end %>
             <% end %>
           </ul>
+		  <% if @nodes%>
           <%= render "layouts/dradis/themes/snowcrash/nodes" %>
-
+		  <% end %>
           <%# need to include this modal here, because not all pages have
               breadcrums (e.g. Project#show).
               Can't move it inside _nodes, because it is used for the "Move
               node" modal, and it would nest :form tags breaking them %>
+			  <% if @new_node%>
           <%= render partial: 'dradis/themes/snowcrash/nodes/modals/add_branch' %>
+		  <% end %>
       </div>
       </div>
       <div class="main-content <%= content_for?(:sidebar) ? 'no-padding' : ''%>">

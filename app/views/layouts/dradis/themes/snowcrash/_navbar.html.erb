@@ -9,7 +9,9 @@
       </a>
       <%= brand_link %>
       <div class="nav-collapse">
+		  
         <ul class="nav pull-right">
+			<li><%= render "layouts/dradis/themes/snowcrash/search_form" %></li>
           <li><%= link_to upload_manager_path, target: '_blank' do %><i class="icon-cloud-upload icon-large"></i> Upload output from tool<% end %></li>
           <li><%= link_to export_manager_path, target: '_blank' do %><i class="icon-file-text-alt icon-large"></i> Export results<% end %></li>
           <li><%= link_to "configurations_path", target: '_blank' do %><i class="icon-cog icon-large"></i> Configuration<% end %></li>
